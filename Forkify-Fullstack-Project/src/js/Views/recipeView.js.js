@@ -3,6 +3,7 @@ import icons from 'url:../../img/icons.svg';
 class RecipeView {
     #parentElement = document.querySelector('.recipe');
     #data;
+    #errorMessage = 'We could not find the recipe. Please try another one!'
 render (data) {
     this.#data = data;
     const markup = this.#generateMarkup();
@@ -15,17 +16,50 @@ render (data) {
     this.#parentElement.innerHTML = ""
 }
 
-renderSpinner = function(){
+renderSpinner (){
   const spinnerMarkup = `
             <div class="spinner">
               <svg>
                 <use href="${icons}#icon-loader"></use>
               </svg>
             </div>
-  `
+  `;
 //   this.#parentElement.innerHTML = ''
   this.#clear();
   this.#parentElement.insertAdjacentHTML("afterbegin", spinnerMarkup)
+}
+
+addHandlerRender(handler){
+  ['hashchange', 'load'].forEach(ev => {window.addEventListener(ev, handler)});
+};
+
+renderError(message = this.#errorMessage){
+  const errorMarkup = `
+      <div class="error">
+            <div>
+              <svg>
+                <use href="${icons}#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+      </div>
+  `
+  this.#clear();
+  this.#parentElement.insertAdjacentHTML("afterbegin", errorMarkup)
+}
+renderSuccess(message = this.#errorMessage){
+  const successMarkup = `
+      <div class="message">
+            <div>
+              <svg>
+                <use href="${icons}#icon-smile"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+      </div>
+  `
+  this.#clear();
+  this.#parentElement.insertAdjacentHTML("afterbegin", successMarkup)
 }
 
 #generateMarkup(){

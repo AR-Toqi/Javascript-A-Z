@@ -1,6 +1,7 @@
 // console.log("test")
 import * as model from './model.js';
 import recipeView from './Views/recipeView.js';
+import searchView from './Views/searchView.js';
 import "regenerator-runtime/runtime.js";
 import 'core-js/stable';
 
@@ -24,11 +25,29 @@ const showRecipe = async () => {
 
     
   } catch (err) {
-    alert(err);
+    console.log(err);
+    recipeView.renderError()
   }
 };
 
+const controlSearchResults = async function () {
+  try {
+    const query = searchView.getQuery();
+    if (!query) return;
 
-['hashchange', 'load'].forEach(ev => {window.addEventListener(ev, showRecipe)});
+    await model.loadSearchResults(query)
+  } catch (error) {
+    
+  }
+  
+};
+
+
+const init = function() {
+  recipeView.addHandlerRender(showRecipe);
+  searchView.addHandlerSearch(controlSearchResults)
+};
+init();
+
 // window.addEventListener('Load', showRecipe)
 // window.addEventListener('hashchange', showRecipe)
