@@ -21,7 +21,7 @@ class paginationView extends View {
             `}
           </button>
         `;
-    }
+    };
 
     _generateMarkup() {
         const currPage = this._data.page;
