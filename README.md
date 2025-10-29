@@ -15,8 +15,7 @@ Each folder represents a key milestone in the learning path, complete with well-
 
 ## 🧩 Projects Included
 <ul>
-Pig Game (DOM Manipulation)
-Bankist (Arrays, Numbers, Dates, Timers. Fake "log in" with user js and PIN 1111)
+Pig Game (DOM Manipulation)<br/>
 Bankist Site (Advanced DOM and Events)
 Mapty (OOP, Geolocation, Project planning)
 forkify (Final advanced project)
@@ -53,6 +52,8 @@ forkify (Final advanced project)
 Frontend Developer | Web Designer | JavaScript Enthusiast
 
 ---
+
+📩 Connect with me on [LinkedIn](https://www.linkedin.com/in/abdullah-ragib-toqi-b5154a297/)
 
 ## ⭐ Contributing
 
