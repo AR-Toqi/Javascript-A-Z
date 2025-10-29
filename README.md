@@ -16,8 +16,8 @@ Each folder represents a key milestone in the learning path, complete with well-
 ## 🧩 Projects Included
 <ul>
 Pig Game (DOM Manipulation)<br/>
-Bankist Site (Advanced DOM and Events)
-Mapty (OOP, Geolocation, Project planning)
+Bankist Site (Advanced DOM and Events)<br/>
+Mapty (OOP, Geolocation, Project planning)<br/>
 forkify (Final advanced project)
 </ul>
 
