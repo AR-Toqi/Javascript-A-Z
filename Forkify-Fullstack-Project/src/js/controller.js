@@ -91,5 +91,3 @@ init();
 
 // window.addEventListener('Load', showRecipe)
 // window.addEventListener('hashchange', showRecipe)
-
-// showRecipe();
